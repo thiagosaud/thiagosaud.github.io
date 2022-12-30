@@ -34,17 +34,7 @@ Use the pattern below:
 
 ### :pencil2: DOCS
 
-### :bulb: REFACTOR
-
-- Correction in Folder Name [TEMP]
-
 - Created [README]
-
-## Version [1.0.1@alpha] (29/12/2022)
-
-### :bulb: REFACTOR
-
-- Correction in Folder Name [TEMP]
 
   **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
   BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
