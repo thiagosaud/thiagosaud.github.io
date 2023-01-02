@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"formulahendry.auto-complete-tag",
+		"EditorConfig.EditorConfig",
+		"dbaeumer.vscode-eslint",
+		"yzhang.markdown-all-in-one",
+		"bierner.markdown-preview-github-styles",
+		"DavidAnson.vscode-markdownlint",
+		"christian-kohler.path-intellisense",
+		"esbenp.prettier-vscode",
+		"redhat.vscode-yaml",
+		"ecmel.vscode-html-css"
+	]
+}
