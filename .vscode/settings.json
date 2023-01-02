@@ -1,0 +1,15 @@
+{
+	// EDITOR CONFIG'S
+	"editor.rulers": [140, 140],
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"diffEditor.ignoreTrimWhitespace": false,
+
+	// EDITOR FORMATTER CONFIG'S
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	}
+}
