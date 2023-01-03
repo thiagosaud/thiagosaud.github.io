@@ -49,5 +49,9 @@ Use the pattern below:
 - Created Template [PULL_REQUEST]
 - Created Workflows
 
+### :bug: FIX
+
+- Correction in Ident [GITHUB_PAGES]
+
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
