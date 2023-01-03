@@ -52,6 +52,7 @@ Use the pattern below:
 ### :bug: FIX
 
 - Correction in Ident [GITHUB_PAGES]
+- Correction in Deploy File Path [CONTROLLER]
 
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
