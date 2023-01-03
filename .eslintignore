@@ -33,6 +33,7 @@ src/pages
 src/*.scss
 src/*.txt
 temp/
+.github
 .husky
 .commitlintrc
 .editorconfig

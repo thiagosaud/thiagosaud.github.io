@@ -1,0 +1,35 @@
+name: FRONTEND TEST
+
+on:
+ pull_request:
+  types: [opened, reopened, synchronize, edited]
+jobs:
+  frontend-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+        architecture: [x64]
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Use Nodejs ${{ matrix.node-version }} - ${{ matrix. architecture }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: RUN YARN INSTALL
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: RUN PRETTIER [TEST]
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: prettier:check
+
+      - name: RUN LINT [TEST]
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint
