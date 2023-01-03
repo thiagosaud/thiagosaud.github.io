@@ -1,0 +1,10 @@
+name: WORKFLOW CONTROLLER
+
+on: [workflow_dispatch, pull_request]
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+  deploy:
+    needs: test
+    uses: ./.github/workflows/deploy.yml
