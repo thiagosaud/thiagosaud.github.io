@@ -21,6 +21,50 @@ This is a website to showcase my portfolio as a Frontend Engineer.
 
 :link: [To interact with the project you can access this link [CLICK HERE]](https://thiagosaud.github.io/)
 
+## :infinity: CI/CD
+
+This project has the following controls:
+
+**TEST WORKFLOW**
+
+| JOB NAME     | DESCRIPTION                       |
+| ------------ | --------------------------------- |
+| RUN PRETTIER | Test the Style-Guide.             |
+| RUN LINT     | Test Syntax Analisys of the code. |
+
+**GITHUB-PAGES WORKFLOW**
+
+| JOB NAME                   | DESCRIPTION                 |
+| -------------------------- | --------------------------- |
+| RUN YARN INSTALL           | Install Libraries.          |
+| RUN YARN BUILD             | Build project with Webpack. |
+| RUN SETUP PAGES            | Configure Pages.            |
+| RUN UPLOAD ARTIFACT        | Upload Pages Artifact.      |
+| RUN DEPLOY TO GITHUB-PAGES | Deployment.                 |
+
+## :crown: Frontend Technologies
+
+| NAME            | URL                                                          |
+| --------------- | ------------------------------------------------------------ |
+| WEBPACK         | [LINK](https://webpack.js.org/)                              |
+| ESLINT          | [LINK](https://eslint.org/)                                  |
+| BRANCHNAME LINT | [LINK](https://github.com/barzik/branch-name-lint)           |
+| COMMIT LINT     | [LINK](https://github.com/conventional-changelog/commitlint) |
+| EDITORCONFIG    | [LINK](hhttps://editorconfig.org/)                           |
+| PRETTIER        | [LINK](https://prettier.io/)                                 |
+| HUSKY           | [LINK](https://typicode.github.io/husky/#/)                  |
+
+## :wrench: Frontend Techniques
+
+| NAME                                  | TECHNOLOGIES                   |
+| ------------------------------------- | ------------------------------ |
+| CODE SYNTAX ANALISYS                  | ESLINT, STYLELINT              |
+| CODE STYLE-GUIDE                      | AIRBNB, PRETTIER, EDITORCONFIG |
+| BRANCH CONTROL AND STANDARDIZATION    | BRANCHNAMELINT                 |
+| COMMIT CONTROL AND STANDARDIZATION    | COMMITLINT                     |
+| GIT HOOKS CONTROL AND STANDARDIZATION | HUSKY                          |
+| RESPONSIVE DESIGN                     | MOBILE FIRST, FLEXBOX AND GRID |
+
 ## :memo: License
 
 See the [LICENSE](LICENSE) for more details.

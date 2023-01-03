@@ -40,6 +40,7 @@ module.exports = {
 		new HtmlWebpackPlugin(getHtmlWebPackPluginOptions('about.html', 'src/pages/about.html')),
 		new HtmlWebpackPlugin(getHtmlWebPackPluginOptions('portfolio.html', 'src/pages/portfolio.html')),
 		new HtmlWebpackPlugin(getHtmlWebPackPluginOptions('contact.html', 'src/pages/contact.html')),
+		new HtmlWebpackPlugin(getHtmlWebPackPluginOptions('404.html', 'src/pages/404.html')),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
 			chunkFilename: '[id].[contenthash].css',
