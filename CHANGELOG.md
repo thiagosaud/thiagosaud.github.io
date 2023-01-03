@@ -65,5 +65,15 @@ Use the pattern below:
 
 - Updated [README]
 
+## Version [1.0.3@alpha] (03/01/2023
+
+### :guitar: FEAT
+
+- Updated Version [PACKAGE]
+
+### :bulb: REFACTOR
+
+- Changed Assets and Temps
+
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
