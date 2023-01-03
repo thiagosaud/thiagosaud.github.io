@@ -54,5 +54,16 @@ Use the pattern below:
 - Correction in Ident [GITHUB_PAGES]
 - Correction in Deploy File Path [CONTROLLER]
 
+## Version [1.0.2@alpha] (03/01/2023)
+
+### :guitar: FEAT
+
+- Created Not Found Page [404]
+- Updated Version [PACKAGE]
+
+### :pencil2: DOCS
+
+- Updated [README]
+
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
