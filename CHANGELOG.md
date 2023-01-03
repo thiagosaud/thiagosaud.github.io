@@ -37,5 +37,17 @@ Use the pattern below:
 
 - Changed [README]
 
+## Version [1.0.1@alpha] (03/01/2023)
+
+### :guitar: FEAT
+
+- Added Workflows in ESLINT/PRETTIER IGNORE FILE
+- Updated Version [PACKAGE]
+
+### :robot: CHORE
+
+- Created Template [PULL_REQUEST]
+- Created Workflows
+
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
