@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="thiagosaud">
 
 <head>
 	<title>THIAGO SAUD - PORTFOLIO</title>
 </head>
 
-<body>
+<body class="px-3 px-xxl-5 mx-xxl-5 mt-4">
+	<nav class="navbar navbar-expand-xxl" role="navigation">
+		<div class="container-fluid flex-nowrap">
+			<a class="navbar-brand d-flex align-items-center gap-3" href="index.html" aria-current="page">
+				<div title="HOME PAGE">
+					<span class="fs-3 fw-bold">THIAGO</span>
+					<span class="fs-3">SAUD</span>
+				</div>
+			</a>
 
+			<button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+				data-bs-target="#navbar-menu-toggle" aria-controls="offcanvasDarkNavbar">
+				<span class="navigation-toggle-first"></span>
+				<span class="navigation-toggle-second"></span>
+				<span class="navigation-toggle-last"></span>
+			</button>
+
+			<div id="navbar-menu-toggle" class="offcanvas offcanvas-top h-100 bg-black" tabindex="-1"
+				aria-labelledby="Navbar Menu Toggle">
+				<div class="offcanvas-header justify-content-end p-5">
+					<button class="navigation-close" type="button" data-bs-dismiss="offcanvas" aria-label="Navbar Close Button">
+						<span class="navigation-close-first"></span>
+						<span class="navigation-close-last"></span>
+					</button>
+				</div>
+
+				<div class="offcanvas-body">
+					<ul class="navbar-nav text-center">
+						<li class="nav-item">
+							<a class="nav-link fs-5" href="./about.html">HARD SKILLS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active fs-5" href="./portfolio.html">WORKS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fs-5" href="./contact.html">TALK TO ME</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="d-none d-xxl-flex align-items-center gap-4">
+				<a class="nav-link socialmedia-link d-flex align-items-center text-white gap-2 fs-4" title="GITHUB"
+					href="https://github.com/thiagosaud" target="_blank">
+					<i class="bi bi-github"></i>
+				</a>
+
+				<a class="nav-link socialmedia-link d-flex align-items-center text-white gap-2 fs-4" title="INSTAGRAM"
+					href="https://www.instagram.com/thiagosaud.dev" target="_blank">
+					<i class="bi bi-instagram"></i>
+				</a>
+
+				<a class="nav-link socialmedia-link d-flex align-items-center text-white gap-2 fs-4" title="LINKEDIN"
+					href="https://www.linkedin.com/in/thiagosaud/" target="_blank">
+					<i class="bi bi-linkedin"></i>
+				</a>
+			</div>
+		</div>
+	</nav>
 </body>
 
 </html>
