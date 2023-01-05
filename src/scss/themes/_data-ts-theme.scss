@@ -1,5 +1,5 @@
 // MY CUSTOM COLORS
-$ts-gray: #2b2f32;
+$ts-gray: #252729;
 $ts-gray-1: #88898e;
 $ts-green: hsl(167, 100%, 50%);
 
@@ -11,6 +11,8 @@ $ts-green: hsl(167, 100%, 50%);
 
 [data-bs-theme='thiagosaud'] {
 	body {
+		overflow: hidden;
+
 		--bs-body-bg: #{$ts-gray};
 		--bs-body-color: #{$ts-gray};
 		--bs-body-color-rgb: #{to-rgb($ts-gray)};
