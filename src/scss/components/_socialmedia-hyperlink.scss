@@ -1,0 +1,8 @@
+a.nav-link.socialmedia-link {
+	transition: all 0.6s ease;
+
+	&:hover {
+		filter: brightness(1.4);
+		color: var(--ts-green) !important;
+	}
+}

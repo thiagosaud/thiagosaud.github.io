@@ -1,0 +1,38 @@
+button.navigation-close {
+	position: absolute;
+	top: 6%;
+	right: 4%;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 300ms ease 0ms;
+	opacity: 0.8;
+	border: none;
+	background: transparent;
+
+	&:hover {
+		opacity: 1;
+		transform: rotate(90deg);
+	}
+
+	span {
+		&.navigation-close-first {
+			transform: rotate(45deg);
+		}
+
+		&.navigation-close-last {
+			transform: rotate(-45deg);
+		}
+
+		&.navigation-close-first,
+		&.navigation-close-last {
+			height: 2px;
+			width: 35px;
+			background-color: whitesmoke;
+			display: block;
+			margin: 4px;
+			cursor: pointer;
+			padding: 1px;
+			border-radius: 20px;
+		}
+	}
+}

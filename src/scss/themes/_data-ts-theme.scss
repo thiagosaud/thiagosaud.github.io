@@ -1,0 +1,17 @@
+// MY CUSTOM COLORS
+$ts-gray: #2b2f32;
+$ts-green: #00a884;
+
+:root {
+	--ts-green: #{$ts-green};
+	--bs-nav-link-color: red;
+}
+
+[data-bs-theme='thiagosaud'] {
+	body {
+		--bs-body-bg: #{$ts-gray};
+		--bs-body-color: #{$ts-gray};
+		--bs-body-color-rgb: #{to-rgb($ts-gray)};
+		--bs-body-bg-rgb: #{to-rgb($ts-gray)};
+	}
+}
