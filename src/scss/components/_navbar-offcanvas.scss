@@ -1,0 +1,12 @@
+nav.navbar {
+	div#navbar-menu-toggle {
+		&.offcanvas {
+			transition: none !important;
+		}
+	}
+}
+
+div.offcanvas:not(.show) .nav-link,
+div.offcanvas.show .nav-link {
+	transition: all 0.3s ease !important;
+}
