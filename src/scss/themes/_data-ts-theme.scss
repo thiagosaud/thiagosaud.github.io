@@ -5,6 +5,8 @@ $ts-green: hsl(167, 100%, 50%);
 
 :root {
 	--ts-green: #{$ts-green};
+	--bs-link-color: #{$ts-green};
+	--bs-link-hover-color: #{rgba($ts-green, 0.8)};
 }
 
 [data-bs-theme='thiagosaud'] {
@@ -13,5 +15,14 @@ $ts-green: hsl(167, 100%, 50%);
 		--bs-body-color: #{$ts-gray};
 		--bs-body-color-rgb: #{to-rgb($ts-gray)};
 		--bs-body-bg-rgb: #{to-rgb($ts-gray)};
+	}
+
+	.text-bg-primary {
+		background-color: $ts-green !important;
+		color: black !important;
+	}
+
+	.lead {
+		color: $ts-gray-1;
 	}
 }
