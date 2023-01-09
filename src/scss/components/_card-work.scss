@@ -8,13 +8,13 @@ div.card.card-work {
 	}
 
 	&:hover {
-		cursor: pointer;
-
 		&[data-isPrivate='false'] {
+			cursor: pointer;
 			border: 1px var(--ts-green) solid;
 		}
 
 		&[data-isPrivate='true'] {
+			cursor: not-allowed;
 			border: 1px var(--ts-red) solid;
 		}
 	}
