@@ -1,0 +1,15 @@
+@import '../mixins/breakpoints';
+
+main.about-main-container {
+	section.about-apresentation-section {
+		@include breakpoint-desktop {
+			width: 75vw;
+		}
+
+		@include breakpoint-max-tablet-extra-large {
+			button {
+				width: 100%;
+			}
+		}
+	}
+}
