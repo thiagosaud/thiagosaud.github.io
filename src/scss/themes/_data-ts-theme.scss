@@ -3,11 +3,13 @@ $ts-gray: #252729;
 $ts-gray-1: #88898e;
 $ts-gray-2: #2b2f32;
 $ts-green: hsl(167, 100%, 50%);
+$ts-red: #dc3545;
 
 :root {
 	--ts-green: #{$ts-green};
 	--ts-gray-1: #{$ts-gray-1};
 	--ts-gray-2: #{$ts-gray-2};
+	--ts-red: #{$ts-red};
 	--bs-link-color: #{$ts-green};
 	--bs-link-hover-color: #{rgba($ts-green, 0.8)};
 }
