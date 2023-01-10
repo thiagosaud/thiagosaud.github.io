@@ -1,0 +1,11 @@
+a.card-hyperlink {
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+		div.card-hyperlink-container {
+			cursor: pointer;
+			border: 1px var(--ts-green) solid;
+		}
+	}
+}

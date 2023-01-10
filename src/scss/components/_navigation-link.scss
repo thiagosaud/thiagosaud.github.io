@@ -1,0 +1,42 @@
+div.offcanvas {
+	&.show {
+		.nav-link {
+			font-size: 2rem !important;
+		}
+	}
+
+	&:not(.show) {
+		.nav-link {
+			margin-left: 3rem;
+		}
+	}
+
+	&:not(.show),
+	&.show {
+		.nav-link {
+			color: white;
+			transition: all 0.6s ease;
+
+			&:not(.active) {
+				opacity: 0.7;
+
+				&:hover {
+					opacity: 1;
+					color: var(--ts-green) !important;
+				}
+			}
+
+			&.active {
+				color: var(--ts-green) !important;
+
+				&::before {
+					content: '< ';
+				}
+
+				&::after {
+					content: ' />';
+				}
+			}
+		}
+	}
+}

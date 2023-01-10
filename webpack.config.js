@@ -42,11 +42,11 @@ module.exports = {
 		new HtmlWebpackPlugin(getHtmlWebPackPluginOptions('contact.html', 'src/pages/contact.html')),
 		new HtmlWebpackPlugin(getHtmlWebPackPluginOptions('404.html', 'src/pages/404.html')),
 		new MiniCssExtractPlugin({
-			filename: '[name].[contenthash].css',
-			chunkFilename: '[id].[contenthash].css',
+			filename: 'static/css/[name].[contenthash:8].css',
+			chunkFilename: 'static/css/[id].[contenthash:8].chunk.css',
 		}),
 		new CopyPlugin({
-			patterns: [{ from: path.resolve(__dirname, 'src/*.txt'), to: path.resolve(__dirname, 'dist') }],
+			patterns: [{ from: path.resolve(__dirname, 'src/robots.txt'), to: path.resolve(__dirname, 'dist'), context: '*.txt' }],
 		}),
 	],
 	devServer: {
@@ -65,7 +65,22 @@ module.exports = {
 			new TerserPlugin({
 				test: /\.js(\?.*)?$/i,
 				parallel: true,
-				minify: TerserPlugin.uglifyJsMinify,
+				terserOptions: {
+					// We want terser to parse ecma 8 code. However, we don't want it
+					// to apply any minification steps that turns valid ecma 5 code
+					// into invalid ecma 5 code. This is why the 'compress' and 'output'
+					// sections only apply transformations that are ecma 5 safe
+					ecma: 8,
+					compress: {
+						ecma: 5,
+						warnings: false,
+						comparisons: false, // Disabled because of an issue with Uglify breaking seemingly valid code:
+						inline: 2, // Disabled because of an issue with Terser breaking valid code:
+					},
+					mangle: {
+						safari10: true,
+					},
+				},
 			}),
 			new ImageMinimizerPlugin({
 				minimizer: {
@@ -102,61 +117,113 @@ module.exports = {
 		],
 	},
 	output: {
-		clean: true,
-		filename: '[name].[contenthash].js',
-		chunkFilename: '[id].[contenthash].js',
+		clean: !process.env.WEBPACK_SERVE,
+		filename: 'static/js/[name].[contenthash:8].js',
+		chunkFilename: 'static/js/[id].[contenthash:8].chunk.js',
+		assetModuleFilename: 'static/assets/[name].[contenthash:8][ext]',
 		path: path.resolve(__dirname, 'dist'),
 	},
 	module: {
+		strictExportPresence: true,
 		rules: [
 			{
-				test: /\.html$/i,
-				loader: 'html-loader',
-			},
-			{
-				test: /\.m?js$/,
-				exclude: /(node_modules|bower_components)/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						cacheDirectory: true,
-						cacheCompression: true,
-						presets: ['@babel/preset-env'],
-						plugins: ['@babel/plugin-transform-runtime'],
-					},
-				},
-			},
-			{
-				mimetype: 'image/svg+xml',
-				scheme: 'data',
-				type: 'asset/resource',
-				generator: {
-					filename: 'icons/[hash].svg',
-				},
-			},
-			{
-				test: /\.(jpe?g|png|gif|svg)$/i,
-				type: 'asset',
-			},
-			{
-				test: /\.(sa|sc|c)ss$/, // SASS AND CSS
-				use: [
+				// "oneOf" will traverse all following loaders until one will
+				// match the requirements. When no loader matches it will fall
+				// back to the "file" loader at the end of the loader list.
+				oneOf: [
 					{
-						loader: MiniCssExtractPlugin.loader,
+						test: /\.avif$/,
+						type: 'asset/resource',
+						mimetype: 'image/avif',
+						parser: {
+							dataUrlCondition: {
+								maxSize: 10000,
+							},
+						},
 					},
+					// "url" loader works like "file" loader except that it embeds assets
+					// smaller than specified limit in bytes as data URLs to avoid requests.
+					// A missing `test` is equivalent to a match.
 					{
-						loader: 'css-loader',
-					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							postcssOptions: {
-								plugins: () => [AutoPrefixer()],
+						test: /\.(png|svg|jpg|jpeg|gif|bmp|ico)$/i,
+						type: 'asset/resource',
+						parser: {
+							dataUrlCondition: {
+								maxSize: 10000,
 							},
 						},
 					},
 					{
-						loader: 'sass-loader',
+						test: /\.svg$/,
+						use: [
+							{
+								loader: require.resolve('@svgr/webpack'),
+								options: {
+									prettier: false,
+									svgo: false,
+									svgoConfig: {
+										plugins: [{ removeViewBox: false }],
+									},
+									titleProp: true,
+									ref: true,
+								},
+							},
+							{
+								loader: require.resolve('file-loader'),
+								options: {
+									name: 'static/media/[name].[hash].[ext]',
+								},
+							},
+						],
+						issuer: {
+							and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+						},
+					},
+					{
+						test: /\.(woff|woff2|eot|ttf|otf)$/i,
+						type: 'asset/resource',
+					},
+					{
+						test: /\.html$/i,
+						loader: 'html-loader',
+					},
+					{
+						test: /\.m?js$/,
+						exclude: /(node_modules|bower_components)/,
+						use: {
+							loader: 'babel-loader',
+							options: {
+								cacheDirectory: true,
+								cacheCompression: true,
+								presets: ['@babel/preset-env'],
+								plugins: ['@babel/plugin-transform-runtime'],
+							},
+						},
+					},
+					{
+						test: /\.(sa|sc|c)ss$/, // SASS AND CSS
+						use: [
+							{
+								loader: MiniCssExtractPlugin.loader,
+							},
+							{
+								loader: 'css-loader',
+								options: {
+									url: true,
+								},
+							},
+							{
+								loader: 'postcss-loader',
+								options: {
+									postcssOptions: {
+										plugins: () => [AutoPrefixer()],
+									},
+								},
+							},
+							{
+								loader: 'sass-loader',
+							},
+						],
 					},
 				],
 			},

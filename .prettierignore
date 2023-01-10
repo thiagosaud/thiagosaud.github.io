@@ -40,4 +40,5 @@ temp/
 .gitignore
 .prettierignore
 .eslintignore
+CNAME
 LICENSE

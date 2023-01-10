@@ -1,0 +1,47 @@
+// MY CUSTOM COLORS
+$ts-gray: #252729;
+$ts-gray-1: #88898e;
+$ts-gray-2: #2b2f32;
+$ts-green: hsl(167, 100%, 50%);
+$ts-red: #dc3545;
+
+:root {
+	--ts-green: #{$ts-green};
+	--ts-gray-1: #{$ts-gray-1};
+	--ts-gray-2: #{$ts-gray-2};
+	--ts-red: #{$ts-red};
+	--bs-link-color: #{$ts-green};
+	--bs-link-hover-color: #{rgba($ts-green, 0.8)};
+}
+
+[data-bs-theme='thiagosaud'] {
+	body {
+		--bs-body-bg: #{$ts-gray};
+		--bs-body-color: #{$ts-gray};
+		--bs-body-color-rgb: #{to-rgb($ts-gray)};
+		--bs-body-bg-rgb: #{to-rgb($ts-gray)};
+	}
+
+	.btn-outline-primary {
+		--bs-btn-color: #{$ts-green};
+		--bs-btn-border-color: #{$ts-green};
+		--bs-btn-hover-bg: #{$ts-green};
+		--bs-btn-hover-border-color: #{$ts-green};
+		--bs-btn-hover-color: black;
+		--bs-btn-active-bg: #{$ts-green};
+		--bs-btn-active-border-color: #{$ts-green};
+	}
+
+	.text-green {
+		color: var(--ts-green) !important;
+	}
+
+	.text-bg-primary {
+		background-color: $ts-green !important;
+		color: black !important;
+	}
+
+	.lead {
+		color: $ts-gray-1;
+	}
+}

@@ -1,2 +1,20 @@
 // Import all of Bootstrap's CSS
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+// CUSTOM THEME [THIAGO SAUD]
+@import './scss/themes/data-ts-theme';
+
+// CUSTOM COMPONENTS [THIAGO SAUD]
+@import './scss/components/main-about';
+@import './scss/components/card-work';
+@import './scss/components/card-hyperlink';
+@import './scss/components/logotype-floating';
+@import './scss/components/navbar-brand';
+@import './scss/components/navbar-offcanvas';
+@import './scss/components/navigation-link';
+@import './scss/components/navigation-toggle';
+@import './scss/components/navigation-close';
+@import './scss/components/planet-animation';
+@import './scss/components/socialmedia-hyperlink';
+

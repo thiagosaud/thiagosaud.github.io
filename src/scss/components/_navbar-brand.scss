@@ -1,0 +1,13 @@
+a.navbar-brand {
+	margin-right: 8rem;
+
+	span {
+		&:first-child {
+			color: var(--ts-green) !important;
+		}
+
+		&:last-child {
+			color: white !important;
+		}
+	}
+}

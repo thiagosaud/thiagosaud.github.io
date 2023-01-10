@@ -1,0 +1,61 @@
+button.navbar-toggler {
+	transform: scaleX(-1);
+	transition: all 400ms ease 0ms;
+
+	&:focus {
+		box-shadow: none !important;
+	}
+
+	&:hover {
+		span {
+			&.navigation-toggle-first,
+			&.navigation-toggle-second {
+				width: 100%;
+			}
+		}
+	}
+
+	span {
+		transition: all 0.5s ease;
+
+		&.navigation-toggle-first {
+			&::before {
+				width: 50%;
+			}
+		}
+
+		&.navigation-toggle-second {
+			&::before {
+				width: 75%;
+			}
+		}
+
+		&.navigation-toggle-last {
+			&::before {
+				width: 100%;
+			}
+		}
+
+		&.navigation-toggle-first,
+		&.navigation-toggle-second,
+		&.navigation-toggle-last {
+			position: relative;
+			background-color: transparent;
+			width: 35px;
+			height: 2px;
+			display: block;
+			margin: 6px;
+			border-radius: 20px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: whitesmoke;
+				border-radius: 35px;
+			}
+		}
+	}
+}

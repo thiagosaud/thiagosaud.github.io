@@ -65,7 +65,7 @@ Use the pattern below:
 
 - Updated [README]
 
-## Version [1.0.3@alpha] (03/01/2023
+## Version [1.0.3@alpha] (03/01/2023)
 
 ### :guitar: FEAT
 
@@ -74,6 +74,42 @@ Use the pattern below:
 ### :bulb: REFACTOR
 
 - Changed Assets and Temps
+
+## Version [2.0.0-rc] (10/01/2023)
+
+### :guitar: FEAT
+
+- Created Components and Theme [SCSS]
+- Created [404-PAGE]
+- Created [ABOUT-PAGE]
+- Created [PORTFOLIO-PAGE]
+- Created [CONTACT-PAGE]
+- Changed Temp and Favicon Files
+- Added Navbar in Pages
+- Added new Components and Theme [INDEX-SCSS]
+- Added ParticlesJS and Main Container [HOME-PAGE]
+- Added new Social Media Links [HOME-PAGE]
+- Added new Component [HOME-PAGE]
+- Added Scripts Folder [ESLINTIGNORE]
+- Added Logotype Floating [HOME-PAGE]
+- Added new Folder to Disallow [ROBOTS]
+- Added CMAME File [IGNORE]
+- Removed Unused Var [DATA-TS-THEME]
+
+### :bulb: REFACTOR
+
+- Removed Brightness Color
+- Refactored [404-PAGE]
+- Refactored [WEBPACK]
+
+### :lipstick: STYLE
+
+- Added Cursor Logic [CARD-WORK]
+- Correction in Body Margin
+- Changed Social Media Link Size and Gap [ALL-PAGES]
+- Changed Bg Color and Fixed Body [DATA-TS-THEME]
+- Fixed Problem [NAVBAR-OFF-CANVAS]
+- Removed Unused Body props and Removed Blank Space
 
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**

@@ -1,0 +1,37 @@
+@import '../mixins/breakpoints';
+
+div.card.card-work {
+	width: 100%;
+
+	@include breakpoint-desktop {
+		width: 25%;
+	}
+
+	&:hover {
+		&[data-isPrivate='false'] {
+			cursor: pointer;
+			border: 1px var(--ts-green) solid;
+		}
+
+		&[data-isPrivate='true'] {
+			cursor: not-allowed;
+			border: 1px var(--ts-red) solid;
+		}
+	}
+
+	h5.card-title.badge {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	img.card-img {
+		object-fit: cover;
+		object-position: center;
+		filter: opacity(0.5) grayscale(1) drop-shadow(2px 4px 6px black);
+
+		@include breakpoint-max-tablet-extra-large {
+			height: 160px;
+		}
+	}
+}
