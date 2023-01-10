@@ -111,5 +111,18 @@ Use the pattern below:
 - Fixed Problem [NAVBAR-OFF-CANVAS]
 - Removed Unused Body props and Removed Blank Space
 
+## Version [2.0.1-rc] (10/01/2023)
+
+### :bulb: REFACTOR
+
+- Changed Linkedin URL in All Pages
+
+### :lipstick: STYLE
+
+- Fixed Title Space [CONTACT-PAGE]
+- Adjusted Text [ABOUT-PAGE]
+- Removed Unused Code [HOME-PAGE]
+- Created [SCROLLBAR]
+
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
