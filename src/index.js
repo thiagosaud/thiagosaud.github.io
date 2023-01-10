@@ -4,3 +4,4 @@ import 'bootstrap';
 
 // SCRIPTS
 import './scripts/particles';
+import './scripts/google-tag';
