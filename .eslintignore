@@ -30,6 +30,7 @@ package.lock
 # others
 src/assets
 src/pages
+src/scripts
 src/*.scss
 src/*.txt
 temp/
