@@ -124,5 +124,12 @@ Use the pattern below:
 - Removed Unused Code [HOME-PAGE]
 - Created [SCROLLBAR]
 
+## Version [2.0.2-rc] (14/01/2023)
+
+### :guitar: FEAT
+
+- Changed the Mailto [CONTACT-PAGE]
+- Changed the PORT NUMBER [WEBPACK]
+
 **THANK YOU FOR YOUR CONTRIBUTION TO THE PROJECT. 💖
 BY [THIAGO DE BONIS CARVALHO SAAD SAUD SAUD](https://www.linkedin.com/in/thiagosaud/)**
